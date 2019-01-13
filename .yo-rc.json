@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "David Bucka",
+      "authorEmail": "info@davidbucka.com",
+      "authorUrl": "davidbucka.com"
+    }
+  }
+}
