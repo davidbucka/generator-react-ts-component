@@ -7,8 +7,7 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "componentName",
-        message: "What should your new component be called?",
-        default: true
+        message: "What should your new component be called?"
       },
       {
         type: "list",
@@ -40,12 +39,29 @@ module.exports = class extends Generator {
 
     const entryPoint = typeOf === "pages" ? "pages" : `components/${typeOf}`;
 
+    // Component.tsx
     this.fs.copyTpl(
-      this.templatePath("component.tsx"),
+      this.templatePath("Component.tsx"),
       this.destinationPath(
         `${entryPoint}/${componentName}/${componentName}.tsx`
       ),
-      { title: this.props.componentName }
+      { componentName }
+    );
+
+    // Component.demo.tsx
+    this.fs.copyTpl(
+      this.templatePath("Component.demo.tsx"),
+      this.destinationPath(
+        `${entryPoint}/${componentName}/${componentName}.demo.tsx`
+      ),
+      { componentName }
+    );
+
+    // Index.tsx
+    this.fs.copyTpl(
+      this.templatePath("index.ts"),
+      this.destinationPath(`${entryPoint}/${componentName}/index.ts`),
+      { componentName }
     );
   }
 };

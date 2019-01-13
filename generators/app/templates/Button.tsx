@@ -1,32 +1,13 @@
 import * as React from "react";
 
-export interface IButtonProps {
-    type?: string;
-    id?: string;
-    cssClass?: string;
-    disabled?: boolean;
-    handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
+export interface I<%= componentName =%>Props {}
 
-const Button: React.FunctionComponent<IButtonProps> = ({
-    type,
-    id,
-    children,
-    cssClass,
-    disabled,
-    handleClick,
-}) => {
-    return (
-        <button
-            id={id}
-            type={type}
-            className={cssClass && `${cssClass}`}
-            onClick={handleClick}
-            disabled={disabled}
-        >
-            {children}
-        </button>
-    );
+const <%= componentName =%>: React.FunctionComponent<I<%= componentName =%>Props> = props => {
+  return (
+    <>
+      <%= componentName =%>
+    </>
+  );
 };
 
-export default Button;
+export default <%= componentName =%>;

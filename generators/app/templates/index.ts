@@ -1,7 +1,3 @@
-import Button from "./Button";
-import Input from "./Input";
-import Label from "./Label";
-import Select from "./Select";
-import TextArea from "./TextArea";
+import <%= componentName %> from "./<%= componentName %>";
 
-export { Button, Input, Label, Select, TextArea };
+export default <%= componentName %>;
