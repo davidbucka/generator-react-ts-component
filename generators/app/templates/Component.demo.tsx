@@ -5,6 +5,6 @@ import { storiesOf } from "@storybook/react";
 
 import <%= componentName %> from "./<%= componentName %>";
 
-storiesOf("<<%= componentName %>>", module).add("with click action", () => (
-    <<%= componentName %>> handleClick={action("test click")} />
+storiesOf("<%= typeOf %>/<%= componentName %>", module).add("with click action", () => (
+    <<%= componentName %> />
 ));

@@ -54,7 +54,7 @@ module.exports = class extends Generator {
       this.destinationPath(
         `${entryPoint}/${componentName}/${componentName}.demo.tsx`
       ),
-      { componentName }
+      { componentName, typeOf }
     );
 
     // Index.tsx
